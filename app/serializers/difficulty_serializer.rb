@@ -1,6 +1,6 @@
 class DifficultySerializer
   include FastJsonapi::ObjectSerializer
+  has_many :puzzles
   attributes :name, :level
 
-  has_many :puzzles
 end
