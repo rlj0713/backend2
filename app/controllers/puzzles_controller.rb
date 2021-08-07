@@ -8,7 +8,7 @@ class PuzzlesController < ApplicationController
     end
 
     def show
-        # puzzle = Puzzle.find(params[:id])
+        puzzle = Puzzle.find(params[:id])
     end
 
 end
