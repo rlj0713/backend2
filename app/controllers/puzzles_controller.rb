@@ -9,7 +9,7 @@ class PuzzlesController < ApplicationController
 
     def show
         puzzle = Puzzle.find(params[:id])
-        render json: PuzzleSerializer.new(puzzle)
+        render json: PuzzleSerializer.new(puzzle, { include: [:difficulty, :approved] })
     end
 
     def create
@@ -20,6 +20,11 @@ class PuzzlesController < ApplicationController
         else
             render json: {error: "This puzzle has already been created.  Please create a unique puzzle"}
         end
+    end
+
+    def destroy
+        puzzle = Puzzle.find(params[:id])
+        puzzle.destroy
     end
 
 end
