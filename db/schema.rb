@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_04_225900) do
+ActiveRecord::Schema.define(version: 2021_08_15_195120) do
 
   create_table "difficulties", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_08_04_225900) do
     t.string "solution"
     t.string "scrambled"
     t.integer "difficulty_id"
+    t.boolean "approved"
   end
 
 end
