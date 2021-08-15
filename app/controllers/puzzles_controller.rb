@@ -14,6 +14,7 @@ class PuzzlesController < ApplicationController
 
     def create
         puzzle = Puzzle.new(solution: params[:solution], difficulty_id: params[:difficulty_id])
+        puzzle.approved = false
         if puzzle.save
             render json: PuzzleSerializer.new(puzzle)
         else
