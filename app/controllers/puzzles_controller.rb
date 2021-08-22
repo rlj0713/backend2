@@ -23,7 +23,7 @@ class PuzzlesController < ApplicationController
     end
 
     def destroy
-        puzzle = Puzzle.find(params[:id])
+        puzzle = Puzzle.find_by_id(params[:id])
         puzzle.destroy
         render json: {message: "Puzzle #{puzzle.id} has been deleted"}
     end
