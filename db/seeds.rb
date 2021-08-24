@@ -12,7 +12,6 @@ Difficulty.create(name: 'Hard', level: 3)
 Difficulty.create(name: 'Expert', level: 4)
 
 
-# Redo the puzzle scrambled to match puzzles
 Puzzle.create(solution: "That's the way the cookie crumbles.", scrambled: "UIBU'T UIF XBZ UIF DPPLJF DSVNCMFT.", difficulty_id: 4, approved: true)
 Puzzle.create(solution: "All's well that ends well. - Anonymous", scrambled: "LWW'D HPWW ESLE PYOD HPWW. - LFESZC FYVYZHY", difficulty_id: 4, approved: true)
 Puzzle.create(solution: "Well done is better than well said. - Benjamin Franklin", scrambled: "EMTT LWVM QA JMBBMZ BPIV EMTT AIQL. - JMVRIUQV NZIVSTQV", difficulty_id: 3, approved: true)
